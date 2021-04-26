@@ -20,10 +20,6 @@
       - [Implementing DarthVaderAPI](#implementing-darthvaderapi)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [SOLID Principles](#solid-principles)
-    - [Observables (OLD SCHOOL - ONLY EXPLANATION!!)](#observables-old-school-only-explanation)
-      - [Anatomy of an Observable](#anatomy-of-an-observable)
-        - [Observer](#observer)
-        - [Subscription](#subscription)
 
 <!-- /code_chunk_output -->
 
