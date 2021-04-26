@@ -12,6 +12,10 @@
       - [Delete existing `.git` folder](#delete-existing-git-folder)
     - [Initialize Git](#initialize-git)
     - [Create an empty component](#create-an-empty-component)
+    - [Preparing Code Style Guides (Prettier)](#preparing-code-style-guides-prettier)
+    - [Create a new route](#create-a-new-route)
+    - [REST API](#rest-api)
+    - [HttpClientModule](#httpclientmodule)
 
 <!-- /code_chunk_output -->
 
@@ -50,4 +54,64 @@ git commit -m "INITIAL COMMIT"
 
 ```shell
 ng g c components/dashboard
+git add .
+git commit -m "Dashboard Component created"
+```
+
+### Preparing Code Style Guides (Prettier)
+
+Create `.prettierrc` at root folder:
+
+```json
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 70,
+  "tabWidth": 2
+}
+```
+
+### Create a new route
+
+> src/app/app-routing.module.ts
+
+z.B.
+
+```ts
+const routes: Routes = [
+  {
+    path: '',
+    component: DashboardComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+];
+```
+
+### REST API
+
+> https://swapi.dev/
+> Darth Vader API URL (Endpoint): http://swapi.dev/api/people/4/
+
+### HttpClientModule
+
+> src/app/app.module.ts
+
+```ts
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [AppComponent, DashboardComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule, // <---- HERE!
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+
 ```
