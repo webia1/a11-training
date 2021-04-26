@@ -15,7 +15,10 @@
     - [Preparing Code Style Guides (Prettier)](#preparing-code-style-guides-prettier)
     - [Create a new route](#create-a-new-route)
     - [REST API](#rest-api)
-    - [HttpClientModule](#httpclientmodule)
+      - [HttpClientModule](#httpclientmodule)
+      - [Create a Service](#create-a-service)
+  - [Backup - Relevant Topics](#backup-relevant-topics)
+    - [SOLID Principles](#solid-principles)
 
 <!-- /code_chunk_output -->
 
@@ -96,7 +99,7 @@ const routes: Routes = [
 > https://swapi.dev/
 > Darth Vader API URL (Endpoint): http://swapi.dev/api/people/4/
 
-### HttpClientModule
+#### HttpClientModule
 
 > src/app/app.module.ts
 
@@ -115,3 +118,11 @@ import { HttpClientModule } from '@angular/common/http';
 })
 
 ```
+
+#### Create a Service
+
+## Backup - Relevant Topics
+
+### SOLID Principles
+
+> <https://en.wikipedia.org/wiki/SOLID>
