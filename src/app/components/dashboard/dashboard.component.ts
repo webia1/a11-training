@@ -8,7 +8,7 @@ import { CommonService } from 'src/app/services/common.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit, OnDestroy {
-  getDarthVaderData: Subscription = new Subscription();
+  darthVaderSubscription: Subscription = new Subscription();
   darthVaderData: unknown;
 
   constructor(private cs: CommonService) {}
@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   getDarthVaderDataFromService() {
     this.cs.log('getDarthVaderDataFromService has been invoked');
 
-    this.getDarthVaderData = this.cs
+    this.darthVaderSubscription = this.cs
       .getDarthVaderData()
       .subscribe(
         (darthVaderDataFromService) =>
@@ -29,8 +29,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.getDarthVaderData) {
-      this.getDarthVaderData.unsubscribe();
+    if (this.darthVaderSubscription) {
+      this.darthVaderSubscription.unsubscribe();
     }
   }
 }

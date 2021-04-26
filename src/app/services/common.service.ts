@@ -21,7 +21,7 @@ export class CommonService {
       .pipe(retry(3), catchError(this.handleError));
   }
 
-  log(message: string, isImportant = false) {
+  log(message: any, isImportant = false) {
     isImportant
       ? console.log(`%c${message}`, 'color:red; font-size:18px')
       : console.log(`%c${message}`, 'color:lime; font-size:18px');
