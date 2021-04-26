@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -6,7 +7,10 @@ import { CommonService } from 'src/app/services/common.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
+  getDarthVaderData: Subscription = new Subscription();
+  darthVaderData: unknown;
+
   constructor(private cs: CommonService) {}
 
   ngOnInit(): void {
@@ -14,8 +18,19 @@ export class DashboardComponent implements OnInit {
   }
 
   getDarthVaderDataFromService() {
-    this.cs.log(
-      'Methode getDarthVaderDataFromService wurde aufgerufen!',
-    );
+    this.cs.log('getDarthVaderDataFromService has been invoked');
+
+    this.getDarthVaderData = this.cs
+      .getDarthVaderData()
+      .subscribe(
+        (darthVaderDataFromService) =>
+          (this.darthVaderData = darthVaderDataFromService),
+      );
+  }
+
+  ngOnDestroy() {
+    if (this.getDarthVaderData) {
+      this.getDarthVaderData.unsubscribe();
+    }
   }
 }
