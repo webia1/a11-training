@@ -121,6 +121,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 #### Create a Service
 
+```shell
+ng g s services/common
+```
+
 ## Backup - Relevant Topics
 
 ### SOLID Principles
