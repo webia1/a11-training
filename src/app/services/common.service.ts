@@ -21,6 +21,12 @@ export class CommonService {
       .pipe(retry(3), catchError(this.handleError));
   }
 
+  log(message: string, isImportant = false) {
+    isImportant
+      ? console.log(`%c${message}`, 'color:red; font-size:18px')
+      : console.log(`%c${message}`, 'color:lime; font-size:18px');
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
