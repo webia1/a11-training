@@ -1,27 +1,53 @@
-# A11
+# A11 - TOF
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-## Development server
+<!-- code_chunk_output -->
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [A11 - TOF](#a11-tof)
+  - [Steps](#steps)
+    - [Angular CLI Installation](#angular-cli-installation)
+    - [Create a new project](#create-a-new-project)
+    - [Preparing git](#preparing-git)
+      - [Delete existing `.git` folder](#delete-existing-git-folder)
+    - [Initialize Git](#initialize-git)
+    - [Create an empty component](#create-an-empty-component)
 
-## Code scaffolding
+<!-- /code_chunk_output -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Steps
 
-## Build
+### Angular CLI Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```shell
+ng i -g @angular/cli
+```
 
-## Running unit tests
+### Create a new project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+ng new a11 --prefix=tof
+```
 
-## Running end-to-end tests
+### Preparing git
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Delete existing `.git` folder
 
-## Further help
+```shell
+cd a11
+rm -rf .git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Initialize Git
+
+```shell
+git init
+git add .
+git commit -m "INITIAL COMMIT"
+```
+
+### Create an empty component
+
+```shell
+ng g c components/dashboard
+```
