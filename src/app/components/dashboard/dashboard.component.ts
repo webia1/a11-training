@@ -11,6 +11,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
   darthVaderSubscription: Subscription = new Subscription();
   darthVaderData: unknown;
 
+  someText: string = 'Sefa richtet aus: ';
+
   constructor(private cs: CommonService) {}
 
   ngOnInit(): void {

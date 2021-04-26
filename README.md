@@ -18,6 +18,8 @@
       - [HttpClientModule](#httpclientmodule)
       - [Create a Service](#create-a-service)
       - [Implementing DarthVaderAPI](#implementing-darthvaderapi)
+    - [PIPES](#pipes)
+      - [Creating a Custom Pipe](#creating-a-custom-pipe)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [SOLID Principles](#solid-principles)
 
@@ -227,6 +229,45 @@ export class DashboardComponent implements OnInit, OnDestroy {
 <p>My DarthVaderData:</p>
 
 <pre><code>{{ darthVaderData | json }}</code></pre>
+```
+
+### PIPES
+
+Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
+
+`DatePipe`: Formats a date value according to locale rules.
+`UpperCasePipe`: Transforms text to all upper case.
+`LowerCasePipe`: Transforms text to all lower case.
+`CurrencyPipe`: Transforms a number to a currency string, formatted according to locale rules.
+`DecimalPipe`: Transforms a number into a string with a decimal point, formatted according to locale rules.
+`PercentPipe`: Transforms a number to a percentage string, formatted according to locale rules.
+
+#### Creating a Custom Pipe
+
+```shell
+ng g pipe pipes/dennis
+```
+
+> src/app/pipes/dennis.pipe.ts
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'dennis',
+})
+export class DennisPipe implements PipeTransform {
+  transform(value: any, ...args: unknown[]): unknown {
+    console.log('ARGS: ', args[0]);
+    return value + args[0] + '  -- Grüße vom Dennis';
+  }
+}
+```
+
+> src/app/components/dashboard/dashboard.component.html
+
+```html
+<p>{{ someText | dennis: 'Hallo' }}</p>
 ```
 
 ## Backup - Relevant Topics
