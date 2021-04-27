@@ -9,7 +9,13 @@ export class F1Component implements OnInit {
   @Input() fromParent: string = 'EMPTY';
   @Input() magMichMeinParent: boolean = true;
 
+  showHtml = false;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.magMichMeinParent) {
+      console.log('F1: Mein Parent mag mich nicht, daher kein HTML');
+    }
+  }
 }
