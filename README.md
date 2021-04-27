@@ -22,6 +22,8 @@
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
+    - [Angular Links](#angular-links)
+      - [Example Applications](#example-applications)
     - [JavaScript](#javascript)
       - [Imports & Exports](#imports-exports)
         - [Imports](#imports)
@@ -287,6 +289,12 @@ export class DennisPipe implements PipeTransform {
 <https://github.com/webia1/Frontend-Ecosystem/tree/main/Angular/Documentation/Data-Sharing-Between-Components>
 
 ## Backup - Relevant Topics
+
+### Angular Links
+
+#### Example Applications
+
+<https://angular.io/guide/example-apps-list>
 
 ### JavaScript
 
