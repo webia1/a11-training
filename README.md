@@ -21,7 +21,11 @@
     - [PIPES](#pipes)
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
   - [Backup - Relevant Topics](#backup-relevant-topics)
+    - [Git](#git)
+      - [Create a new branch based on current branch](#create-a-new-branch-based-on-current-branch)
     - [SOLID Principles](#solid-principles)
+    - [History](#history)
+      - [Import Ability](#import-ability)
 
 <!-- /code_chunk_output -->
 
@@ -272,6 +276,20 @@ export class DennisPipe implements PipeTransform {
 
 ## Backup - Relevant Topics
 
+### Git
+
+#### Create a new branch based on current branch
+
+```shell
+git checkout -b develop
+```
+
 ### SOLID Principles
 
 > <https://en.wikipedia.org/wiki/SOLID>
+
+### History
+
+#### Import Ability
+
+SO: <https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file>
