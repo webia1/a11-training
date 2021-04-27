@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tof-f2',
   templateUrl: './f2.component.html',
-  styleUrls: ['./f2.component.scss']
+  styleUrls: ['./f2.component.scss'],
 })
 export class F2Component implements OnInit {
+  @Input() fromParent: string = 'EMPTY';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
