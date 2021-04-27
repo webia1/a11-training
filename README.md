@@ -23,7 +23,7 @@
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [Angular/RxJS/.. Links](#angularrxjs-links)
-      - [Marble Diagramme](#marble-diagramme)
+      - [Marble Diagrams](#marble-diagrams)
       - [Example Applications](#example-applications)
     - [JavaScript](#javascript)
       - [Imports & Exports](#imports-exports)
