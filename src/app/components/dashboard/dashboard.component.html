@@ -2,8 +2,9 @@
   <div class="cTitle1">Dashboard component</div>
 
   <div class="cMessagesFromChildren">
-    <p><strong>Message F1:</strong> {{ messageFromF1 }}</p>
-    <p><strong>Message F2:</strong> {{ messageFromF2 }}</p>
+    <p><strong>ViewChild F1:</strong> {{ messageFromF1 }}</p>
+    <p><strong>ViewChild F2:</strong> {{ messageFromF2 }}</p>
+    <p><strong>OutPutMessage</strong> {{ message }}</p>
   </div>
 
   <div class="cChildren">
@@ -11,10 +12,12 @@
     <tof-f1
       [fromParent]="parentProperty"
       [magMichMeinParent]="false"
+      (messageEvent)="receiveMessage($event)"
     ></tof-f1>
     <tof-f2
       [fromParent]="parentProperty"
       [magMichMeinParent]="true"
+      (messageEvent)="receiveMessage($event)"
     ></tof-f2>
   </div>
 </div>

@@ -24,6 +24,7 @@ export class DashboardComponent
   someText: string = 'Sefa richtet aus: ';
   messageFromF1: string | null = null;
   messageFromF2: string | null = null;
+  message: any = 'Noch keine Message!';
 
   @ViewChild(F1Component) childF1: any;
   @ViewChild(F2Component) childF2: any;
@@ -41,6 +42,10 @@ export class DashboardComponent
   getMessagesFromChildren() {
     this.messageFromF1 = this.childF1.message;
     this.messageFromF2 = this.childF2.message;
+  }
+
+  receiveMessage($event: any) {
+    this.message = $event;
   }
 
   getDarthVaderDataFromService() {
