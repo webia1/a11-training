@@ -21,12 +21,17 @@ export class F1Component implements OnInit {
   message: string = 'ich bin F1';
   broadcastMessage: string = 'Noch nichts';
 
-  constructor(private data: DataService) {}
+  constructor(private data: DataService) {
+    this.data.currentMessage.subscribe(
+      (message) => (this.broadcastMessage = message),
+    );
+  }
 
   ngOnInit(): void {}
 
   clickMe() {
     console.log('F1 geklickt!');
     this.messageEvent.emit(this.message);
+    this.data.changeMessage('Hello from F1');
   }
 }
