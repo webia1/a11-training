@@ -20,6 +20,7 @@
       - [Implementing DarthVaderAPI](#implementing-darthvaderapi)
     - [PIPES](#pipes)
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
+    - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [JavaScript](#javascript)
       - [Imports & Exports](#imports-exports)
