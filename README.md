@@ -301,6 +301,10 @@ export class DennisPipe implements PipeTransform {
 
 <https://angular.io/guide/example-apps-list>
 
+#### SO Links
+
+- ChangeDetector (MatTable): <https://stackoverflow.com/a/55021197/3025289>
+
 ### JavaScript
 
 #### Imports & Exports
