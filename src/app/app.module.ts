@@ -7,9 +7,14 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DennisPipe } from './pipes/dennis.pipe';
 import { F1Component } from './components/f1/f1.component';
+import { F2Component } from './components/f2/f2.component';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, DennisPipe, F1Component],
+
+
+@NgModule({
+  declarations: [AppComponent, DashboardComponent, DennisPipe, F2Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
