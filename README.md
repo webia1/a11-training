@@ -22,7 +22,8 @@
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
-    - [Angular Links](#angular-links)
+    - [Angular/RxJS/.. Links](#angularrxjs-links)
+      - [Marble Diagramme](#marble-diagramme)
       - [Example Applications](#example-applications)
     - [JavaScript](#javascript)
       - [Imports & Exports](#imports-exports)
@@ -290,7 +291,11 @@ export class DennisPipe implements PipeTransform {
 
 ## Backup - Relevant Topics
 
-### Angular Links
+### Angular/RxJS/.. Links
+
+#### Marble Diagrams
+
+<https://rxmarbles.com/>
 
 #### Example Applications
 
