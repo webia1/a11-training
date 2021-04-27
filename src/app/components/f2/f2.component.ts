@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class F2Component implements OnInit {
   @Input() fromParent: string = 'EMPTY';
   @Input() magMichMeinParent: boolean = true;
+  message: string = 'ich bin F2';
 
   constructor() {}
 
