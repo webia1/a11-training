@@ -281,6 +281,10 @@ export class DennisPipe implements PipeTransform {
 <p>{{ someText | dennis: 'Hallo' }}</p>
 ```
 
+### DATA EXCHANGE BETWEEN COMPONENTS
+
+<https://github.com/webia1/Frontend-Ecosystem/tree/main/Angular/Documentation/Data-Sharing-Between-Components>
+
 ## Backup - Relevant Topics
 
 ### JavaScript
