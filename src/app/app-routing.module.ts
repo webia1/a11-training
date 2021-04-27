@@ -13,9 +13,10 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
   },
-    {
+  {
     path: 'f1',
     component: F1Component,
+  },
   {
     path: 'f2',
     component: F2Component,
