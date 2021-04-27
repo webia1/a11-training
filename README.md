@@ -291,13 +291,17 @@ git checkout -b develop
 git push -u origin develop
 ```
 
-### Clone an existing Repo from GitHub
+#### Clone an existing Repo from GitHub
 
 ![GitClone](Doc-Assets/gitRepoClonen.png)
 
 ```shell
 git clone https://github.com/webia1/a11-training.git
 ```
+
+#### An WorkFlow Example with git
+
+<https://jeffkreeftmeijer.com/git-flow/>
 
 ### SOLID Principles
 
