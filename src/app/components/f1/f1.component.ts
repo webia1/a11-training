@@ -5,6 +5,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'tof-f1',
@@ -18,8 +19,9 @@ export class F1Component implements OnInit {
   @Output() messageEvent = new EventEmitter<string>();
 
   message: string = 'ich bin F1';
+  broadcastMessage: string = 'Noch nichts';
 
-  constructor() {}
+  constructor(private data: DataService) {}
 
   ngOnInit(): void {}
 
