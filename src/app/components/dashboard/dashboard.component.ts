@@ -10,7 +10,7 @@ import { CommonService } from 'src/app/services/common.service';
 export class DashboardComponent implements OnInit, OnDestroy {
   darthVaderSubscription: Subscription = new Subscription();
   darthVaderData: unknown;
-  parentProperty = 'I am Dashboard (= Parent)';
+  parentProperty = 'Form Parent Dashboard';
 
   someText: string = 'Sefa richtet aus: ';
 

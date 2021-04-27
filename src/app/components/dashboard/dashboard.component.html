@@ -2,7 +2,13 @@
   <div class="cTitle1">Dashboard component</div>
   <div class="cChildren">
     <div>Children</div>
-    <tof-f1></tof-f1>
-    <tof-f2></tof-f2>
+    <tof-f1
+      [fromParent]="parentProperty"
+      [magMichMeinParent]="false"
+    ></tof-f1>
+    <tof-f2
+      [fromParent]="parentProperty"
+      [magMichMeinParent]="true"
+    ></tof-f2>
   </div>
 </div>
