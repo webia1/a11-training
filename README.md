@@ -23,6 +23,7 @@
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [Git](#git)
       - [Create a new branch based on current branch](#create-a-new-branch-based-on-current-branch)
+      - [Create and push a branch](#create-and-push-a-branch)
     - [SOLID Principles](#solid-principles)
     - [History](#history)
       - [Import Ability](#import-ability)
@@ -282,6 +283,12 @@ export class DennisPipe implements PipeTransform {
 
 ```shell
 git checkout -b develop
+```
+
+#### Create and push a branch
+
+```shell
+git push -u origin develop
 ```
 
 ### SOLID Principles
