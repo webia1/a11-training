@@ -9,6 +9,7 @@ import { DennisPipe } from './pipes/dennis.pipe';
 import { F1Component } from './components/f1/f1.component';
 import { F2Component } from './components/f2/f2.component';
 import { ExamplesComponent } from './components/examples/examples.component';
+import { EzeroComponent } from './components/ezero/ezero.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ExamplesComponent } from './components/examples/examples.component';
     F1Component,
     F2Component,
     ExamplesComponent,
+    EzeroComponent,
   ],
   imports: [
     BrowserModule,
