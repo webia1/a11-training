@@ -22,15 +22,19 @@
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
+    - [VSCode Code Snippets](#vscode-code-snippets)
     - [Angular/RxJS/.. Links](#angularrxjs-links)
       - [Interessante UI Libs](#interessante-ui-libs)
       - [Marble Diagrams](#marble-diagrams)
       - [Example Applications](#example-applications)
       - [SO Links](#so-links)
     - [JavaScript](#javascript)
+      - [Falsy Values](#falsy-values)
       - [Imports & Exports](#imports-exports)
         - [Imports](#imports)
         - [Exports](#exports)
+    - [TypeScript](#typescript)
+      - [TS Projekt aufsetzen](#ts-projekt-aufsetzen)
     - [Git](#git)
       - [Create a new branch based on current branch](#create-a-new-branch-based-on-current-branch)
       - [Create and push a branch](#create-and-push-a-branch)
@@ -293,6 +297,23 @@ export class DennisPipe implements PipeTransform {
 
 ## Backup - Relevant Topics
 
+### VSCode Code Snippets
+
+Preferences/User Snippes
+&rarr; Choose Language &rarr; Markdown
+
+````markdown
+<!-- prettier-ignore-start -->
+
+  "Markdown Shell": {
+    "prefix": "ebsh",
+    "body": ["```shell", "$1", "```"], 
+    "description": "Log output to console"
+  }
+
+<!-- prettier-ignore-end -->
+````
+
 ### Angular/RxJS/.. Links
 
 #### Interessante UI Libs
@@ -312,6 +333,10 @@ export class DennisPipe implements PipeTransform {
 - ChangeDetector (MatTable): <https://stackoverflow.com/a/55021197/3025289>
 
 ### JavaScript
+
+#### Falsy Values
+
+<https://stackoverflow.com/a/19839953/3025289>
 
 #### Imports & Exports
 
@@ -346,6 +371,24 @@ export { name1 as default, … };
 export * from …;
 export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
+```
+
+### TypeScript
+
+#### TS Projekt aufsetzen
+
+**Steps:**
+
+```shell
+npm i typescript -g  // TS Language + Compiler + TypeSystem
+tsc --init
+# edit tsconfig.json -> "outDir": "./dist"
+tsc
+node dist/index.js
+
+# The both last steps can be done in one step with `ts-node`
+ts-node src/index.ts
+
 ```
 
 ### Git

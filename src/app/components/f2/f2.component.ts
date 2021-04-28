@@ -30,6 +30,7 @@ export class F2Component implements OnInit {
   ngOnInit(): void {}
 
   clickMe() {
+    let temp = 10;
     console.log('F2 geklickt!');
     this.messageEvent.emit(this.message);
     this.data.changeMessage('Hello from F2');
