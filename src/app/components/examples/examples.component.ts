@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { first, map } from 'rxjs/operators';
 
 @Component({
   selector: 'tof-examples',
@@ -8,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ExamplesComponent implements OnInit {
   queryParams: any;
+  routeData: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -15,15 +18,24 @@ export class ExamplesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.initData();
+    this.getAllRouteData();
   }
 
-  initData() {
-    this.route.queryParams.subscribe((p) => {
-      this.queryParams = p;
-      console.log('Query Parameters: ', this.queryParams);
-    });
+  getAllRouteData() {
+    const routeObservables = [
+      this.route.paramMap.pipe(map(() => window.history.state)),
+      this.route.url,
+      this.route.params,
+      this.route.queryParams,
+      this.route.fragment,
+      this.route.data,
+    ];
 
-    console.log('Snapshot: ', this.route.snapshot);
+    forkJoin(routeObservables.map((r) => r.pipe(first()))).subscribe(
+      (routeData: any) => {
+        this.routeData = routeData;
+        console.log('Route Data: ', this.routeData);
+      },
+    );
   }
 }
