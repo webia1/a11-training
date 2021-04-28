@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DennisPipe } from './pipes/dennis.pipe';
 import { F1Component } from './components/f1/f1.component';
 import { F2Component } from './components/f2/f2.component';
+import { ExamplesComponent } from './components/examples/examples.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { F2Component } from './components/f2/f2.component';
     DennisPipe,
     F1Component,
     F2Component,
+    ExamplesComponent,
   ],
   imports: [
     BrowserModule,
