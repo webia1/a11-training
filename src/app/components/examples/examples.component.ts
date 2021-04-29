@@ -12,10 +12,7 @@ export class ExamplesComponent implements OnInit {
   queryParams: any;
   routeData: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.getAllRouteData();

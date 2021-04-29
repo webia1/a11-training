@@ -23,6 +23,8 @@
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [VSCode Code Snippets](#vscode-code-snippets)
+    - [RxJS](#rxjs)
+      - [of](#of)
     - [Angular/RxJS/.. Links](#angularrxjs-links)
       - [Interessante UI Libs](#interessante-ui-libs)
       - [Marble Diagrams](#marble-diagrams)
@@ -313,6 +315,19 @@ Preferences/User Snippes
 
 <!-- prettier-ignore-end -->
 ````
+
+### RxJS
+
+#### of
+
+```ts
+import { of } from 'rxjs';
+of(10, 20, 30).subscribe(
+  (next) => console.log('next:', next),
+  (err) => console.log('error:', err),
+  () => console.log('the end'),
+);
+```
 
 ### Angular/RxJS/.. Links
 
