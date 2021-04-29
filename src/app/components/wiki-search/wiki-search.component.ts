@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {
+  map,
+  debounceTime,
+  distinctUntilChanged,
+} from 'rxjs/operators';
 import { WikipediaSearchService } from 'src/app/services/wikipedia-search.service';
 
 @Component({
@@ -13,7 +17,9 @@ export class WikiSearchComponent implements OnInit {
   term$ = new Subject<string>();
 
   constructor(private ws: WikipediaSearchService) {
-    this.term$.subscribe((term) => this.search(term));
+    this.term$
+      .pipe(debounceTime(400), distinctUntilChanged())
+      .subscribe((term) => this.search(term));
   }
 
   search(term: string) {
