@@ -18,12 +18,20 @@ export class EzeroComponent implements OnInit {
   // FROM TEMPLATE
 
   goToExample() {
-    console.log('goToExample aufgerufen!');
     this.router.navigate(['/examples'], {
       relativeTo: this.route,
       queryParams: {
         dennis: 1,
         sefa: 1,
+      },
+      state: {
+        data: {
+          technology: {
+            framework: 'Angular',
+            version: '11',
+          },
+          site: 'angular.io',
+        },
       },
     });
   }

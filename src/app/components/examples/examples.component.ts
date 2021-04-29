@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { first, map } from 'rxjs/operators';
 
@@ -9,10 +9,12 @@ import { first, map } from 'rxjs/operators';
   styleUrls: ['./examples.component.scss'],
 })
 export class ExamplesComponent implements OnInit {
-  queryParams: any;
   routeData: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     this.getAllRouteData();
