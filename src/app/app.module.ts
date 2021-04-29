@@ -13,6 +13,7 @@ import { F1Component } from './components/f1/f1.component';
 import { F2Component } from './components/f2/f2.component';
 import { ExamplesComponent } from './components/examples/examples.component';
 import { EzeroComponent } from './components/ezero/ezero.component';
+import { WikiSearchComponent } from './components/wiki-search/wiki-search.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { EzeroComponent } from './components/ezero/ezero.component';
     F2Component,
     ExamplesComponent,
     EzeroComponent,
+    WikiSearchComponent,
   ],
   imports: [
     BrowserModule,

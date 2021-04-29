@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClientModule,
-  HttpClientJsonpModule,
-  HttpClient,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { map } from 'rxjs/operators';
 
@@ -21,8 +16,11 @@ export class WikipediaSearchService {
       'https://en.wikipedia.org/w/api.php?action=opensearch&search=' +
       term +
       '&format=json';
-    return this.http
-      .jsonp(url, 'callback')
-      .pipe(map((response: any) => response[1]));
+    return this.http.jsonp(url, 'callback').pipe(
+      map((response: any) => {
+        console.log('Wikipedia Response: ', response);
+        return response[1];
+      }),
+    );
   }
 }
