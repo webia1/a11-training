@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { actionReducerMap } from './store';
 import { IssuesComponent } from './components/issues/issues.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EzeroComponent,
     WikiSearchComponent,
     IssuesComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,

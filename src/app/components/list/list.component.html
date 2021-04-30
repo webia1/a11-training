@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li *ngFor="let issue of issues$ | async">
+      <h3>
+        {{ issue.title }}
+
+        <small>{{ issue.priority }}</small>
+      </h3>
+      <p>{{ issue.description }}</p>
+    </li>
+  </ul>
+</div>
