@@ -17,6 +17,7 @@ import { WikiSearchComponent } from './components/wiki-search/wiki-search.compon
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { actionReducerMap } from './store';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,11 @@ import { environment } from '../environments/environment';
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
     HttpClientJsonpModule,
-    StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreModule.forRoot(actionReducerMap),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
