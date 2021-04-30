@@ -29,6 +29,8 @@
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [VSCode Code Snippets](#vscode-code-snippets)
     - [RxJS](#rxjs)
+    - [NgRx-Store](#ngrx-store)
+      - [Setup](#setup)
     - [Angular/RxJS/.. Links](#angularrxjs-links)
       - [Interessante UI Libs](#interessante-ui-libs)
       - [Marble Diagrams](#marble-diagrams)
@@ -344,6 +346,14 @@ Preferences/User Snippets
 ### RxJS
 
 &rarr; <https://github.com/webia1/ts-vanille>
+
+### NgRx-Store
+
+&rarr; <https://blog.angular-university.io/angular-2-redux-ngrx-rxjs/>
+
+#### Setup
+
+// TODO: Hier fortsetzen
 
 ### Angular/RxJS/.. Links
 
