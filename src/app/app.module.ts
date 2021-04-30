@@ -19,6 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { actionReducerMap } from './store';
 import { IssuesComponent } from './components/issues/issues.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { IssuesComponent } from './components/issues/issues.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
     HttpClientJsonpModule,
