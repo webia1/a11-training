@@ -21,10 +21,14 @@
     - [PIPES](#pipes)
       - [Creating a Custom Pipe](#creating-a-custom-pipe)
     - [DATA EXCHANGE BETWEEN COMPONENTS](#data-exchange-between-components)
+      - [1 - @Input/@Output](#1-inputoutput)
+      - [2 - Behavior Subject](#2-behavior-subject)
+      - [3 - @ViewChild](#3-viewchild)
+      - [4 - Route Data](#4-route-data)
+      - [5 - @ngrx/store](#5-ngrxstore)
   - [Backup - Relevant Topics](#backup-relevant-topics)
     - [VSCode Code Snippets](#vscode-code-snippets)
     - [RxJS](#rxjs)
-      - [of](#of)
     - [Angular/RxJS/.. Links](#angularrxjs-links)
       - [Interessante UI Libs](#interessante-ui-libs)
       - [Marble Diagrams](#marble-diagrams)
@@ -295,13 +299,34 @@ export class DennisPipe implements PipeTransform {
 
 ### DATA EXCHANGE BETWEEN COMPONENTS
 
-<https://github.com/webia1/Frontend-Ecosystem/tree/main/Angular/Documentation/Data-Sharing-Between-Components>
+Overview: <https://github.com/webia1/Frontend-Ecosystem/tree/main/Angular/Documentation/Data-Sharing-Between-Components>
+
+#### 1 - @Input/@Output
+
+&rarr; src/app/components/dashboard/dashboard.component.ts
+
+#### 2 - Behavior Subject
+
+&rarr; src/app/services/common.service.ts
+
+#### 3 - @ViewChild
+
+&rarr; src/app/components/dashboard/dashboard.component.ts
+
+#### 4 - Route Data
+
+Sending &rarr; src/app/components/ezero/ezero.component.ts
+Receiving &rarr; src/app/components/examples/examples.component.ts
+
+#### 5 - @ngrx/store
+
+Store implementation
 
 ## Backup - Relevant Topics
 
 ### VSCode Code Snippets
 
-Preferences/User Snippes
+Preferences/User Snippets
 &rarr; Choose Language &rarr; Markdown
 
 ````markdown
@@ -318,16 +343,7 @@ Preferences/User Snippes
 
 ### RxJS
 
-#### of
-
-```ts
-import { of } from 'rxjs';
-of(10, 20, 30).subscribe(
-  (next) => console.log('next:', next),
-  (err) => console.log('error:', err),
-  () => console.log('the end'),
-);
-```
+&rarr; <https://github.com/webia1/ts-vanille>
 
 ### Angular/RxJS/.. Links
 
@@ -392,6 +408,8 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 
 #### TS Projekt aufsetzen
 
+&rarr; <https://github.com/webia1/ts-vanille>
+
 **Steps:**
 
 ```shell
@@ -407,6 +425,8 @@ ts-node src/index.ts
 ```
 
 ### Git
+
+More Examples &rarr; <https://github.com/webia1/Frontend-Ecosystem/tree/main/Git>
 
 #### Create a new branch based on current branch
 
