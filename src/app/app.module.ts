@@ -18,6 +18,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { actionReducerMap } from './store';
+import { IssuesComponent } from './components/issues/issues.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { actionReducerMap } from './store';
     ExamplesComponent,
     EzeroComponent,
     WikiSearchComponent,
+    IssuesComponent,
   ],
   imports: [
     BrowserModule,
