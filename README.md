@@ -353,7 +353,10 @@ Preferences/User Snippets
 
 #### Setup
 
-// TODO: Hier fortsetzen
+```shell
+ng add @ngrx/store
+ng add @ngrx/store-devtools
+```
 
 ### Angular/RxJS/.. Links
 

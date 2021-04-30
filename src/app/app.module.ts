@@ -14,6 +14,9 @@ import { F2Component } from './components/f2/f2.component';
 import { ExamplesComponent } from './components/examples/examples.component';
 import { EzeroComponent } from './components/ezero/ezero.component';
 import { WikiSearchComponent } from './components/wiki-search/wiki-search.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { WikiSearchComponent } from './components/wiki-search/wiki-search.compon
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
     HttpClientJsonpModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],
