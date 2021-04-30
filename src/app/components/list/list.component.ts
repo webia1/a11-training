@@ -18,8 +18,11 @@ export class ListComponent implements OnInit {
   }
 
   getDataFromStore() {
-    this.issues$ = this.store.select((state) =>
-      Object.values(state.issue.entities),
-    );
+    this.issues$ = this.store.select((state) => {
+      const returnValue = Object.values(state?.issue?.entities);
+      return Array.isArray(returnValue) && returnValue.length > 0
+        ? returnValue
+        : [];
+    });
   }
 }
